@@ -1,4 +1,4 @@
-package com.example.login_signup_page_ui
+package com.booking.app
 
 import io.flutter.embedding.android.FlutterActivity
 

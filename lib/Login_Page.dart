@@ -1,7 +1,9 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:login_signup_page_ui/SplashScreen.dart';
+import 'package:login_signup_page_ui/forgetPassword.dart';
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -10,6 +12,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+    bool obscureText=true;
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -54,21 +57,35 @@ class _LoginPageState extends State<LoginPage> {
                            )),
                        Padding(
                          padding: const EdgeInsets.all(20),
-                         child: TextFormField(
-                           style: GoogleFonts.andadaPro(fontSize: 20),
-                           decoration: const InputDecoration(
-                                  hintText: 'Email',
-                             suffix: Icon(Icons.mail_lock_outlined)
+                         child: FadeInLeft(
+                           duration: Duration(milliseconds: 1800),
+                           child: TextFormField(
+                             style: GoogleFonts.andadaPro(fontSize: 20),
+                             decoration: const InputDecoration(
+                                    hintText: 'Email',
+                               suffix: Icon(Icons.mail_lock_outlined)
+                             ),
                            ),
                          ),
                        ),
                        Padding(
                          padding: const EdgeInsets.all(20),
-                         child: TextFormField(
-                           style: GoogleFonts.andadaPro(fontSize: 20),
-                           decoration: const InputDecoration(
-                               hintText: 'Password',
-                               suffix: Icon(Icons.visibility_sharp)
+                         child: FadeInLeft(
+                           duration: Duration(milliseconds: 1800),
+                           child: TextFormField(
+                             obscureText: obscureText,
+                             style: GoogleFonts.andadaPro(fontSize: 20),
+                             decoration:  InputDecoration(
+                                 hintText: 'Password',
+                                 suffix: GestureDetector(
+                                     onTap: (){
+                                       setState(() {
+                                         obscureText=!obscureText;
+                                       });
+                                     },
+                                     child: obscureText? Icon(Icons.visibility_sharp):
+                                     Icon(Icons.visibility_off)),
+                             ),
                            ),
                          ),
                        ),
@@ -82,11 +99,11 @@ class _LoginPageState extends State<LoginPage> {
                            children: [
                              InkWell(
                               onTap: (){
-                             Get.to(SplashScreen());
+                             Get.to(const ForgetPassword());
                               },
                                child: Container(
                                  height: 60,
-                                 width: 90,
+                                 width: 210,
                                  decoration:  BoxDecoration(
                                    color: Colors.white70,
                                  border: Border.all(
@@ -97,7 +114,7 @@ class _LoginPageState extends State<LoginPage> {
                                      padding: const EdgeInsets.all(8.0),
                                      child: Row(
                                          children: [
-                                       Text('Skip',style: GoogleFonts.andadaPro(fontSize: 22),),
+                                       Text('ForgotPassword',style: GoogleFonts.andadaPro(fontSize: 22),),
                                        SizedBox(width: 5,),
                                        const Icon(Icons.arrow_forward_ios,size: 18,color: Colors.blue,),
                                      ]

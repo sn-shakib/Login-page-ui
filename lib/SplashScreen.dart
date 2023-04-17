@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
+import 'package:login_signup_page_ui/signupScreen.dart';
 
 import 'Login_Page.dart';
 class SplashScreen extends StatefulWidget {
@@ -39,7 +40,9 @@ class _SplashScreenState extends State<SplashScreen> {
                  child: Column(
                    children: [
                      InkWell(
-                       onTap: (){},
+                       onTap: (){
+                         Get.to(const SignupScreen());
+                       },
                        child: Container(
                        height:60,
                        width: 340,
@@ -58,7 +61,7 @@ class _SplashScreenState extends State<SplashScreen> {
                        width: 340,
                        decoration: BoxDecoration(
                          borderRadius: BorderRadius.circular(15),
-                         color: Color(0xFF222325),
+                         color: const Color(0xFF222325),
                        ),child: Padding(
                          padding: const EdgeInsets.all(15),
                          child: Row(

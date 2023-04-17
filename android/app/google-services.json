@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "738582619446",
+    "project_id": "bookingprocessingapp",
+    "storage_bucket": "bookingprocessingapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738582619446:android:af054ba2527fc63a583f97",
+        "android_client_info": {
+          "package_name": "com.booking.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738582619446-826iqvc9kv5bt6h6ov97fr5nb434hf75.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.booking.app",
+            "certificate_hash": "e98af2d2a0561aec8acaa29dbb31ea8eb2045c12"
+          }
+        },
+        {
+          "client_id": "738582619446-v0828i2onmo6franjl24jle4qts3u60n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKg2wEg5-a0Hrix44YqYcsC7hDmyA1gZQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738582619446-v0828i2onmo6franjl24jle4qts3u60n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

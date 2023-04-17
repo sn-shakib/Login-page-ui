@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.login_signup_page_ui">
+    package="com.booking.app">
    <application
         android:label="login_signup_page_ui"
         android:name="${applicationName}"
